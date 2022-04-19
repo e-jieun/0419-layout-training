@@ -3,22 +3,7 @@
   padding: 0;
 }
 
-#root > div #card-section > card-one {
-  width: 90vw;
-  height: 50vh;
-  position: relative;
-  top: -20vh;
-  background-color: rgba(200, 200, 200, 0.2);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  padding: 1vw;
-  margin-bottom: 2vh;
-  border-radius: 3vw;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-#root > div #card-section {
+#root > #card-section .card-contains {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,77 +15,90 @@
           justify-content: center;
 }
 
-#root > div #card-section {
+#root #shape > div:nth-child(3), #root > #card-section {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
+#root #shape > div:nth-child(1), #root #shape > div:nth-child(2), #root #shape > div:nth-child(3) > div {
+  border-radius: 100%;
+}
+
 #root {
+  background-color: #262626;
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
 }
 
-#root {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#root > div {
-  border: 1px solid white;
-}
-
-#root > div > #shape {
+#root #shape {
   position: relative;
   width: inherit;
   height: 50vh;
 }
 
-#root > div > #shape > div {
+#root #shape > div {
   position: absolute;
 }
 
-#root > div > #shape > div:nth-child(1) {
-  width: 10vw;
-  height: 10vw;
-  background-color: salmon;
-  border-radius: 50%;
-  left: 10vw;
+#root #shape > div:nth-child(1) {
+  width: 30vw;
+  height: 30vw;
+  background-color: #ff5757;
+  left: 20vw;
   top: 10vh;
-  z-index: 0;
 }
 
-#root > div > #shape > div:nth-child(2) {
+#root #shape > div:nth-child(2) {
   width: 50vw;
   height: 50vw;
-  border-radius: 50%;
   border: 2px solid yellow;
-  left: 14vw;
+  left: 20vw;
   top: 15vh;
 }
 
-#root > div > #shape > div:nth-child(3) {
+#root #shape > div:nth-child(3) {
   width: 1vw;
-  height: 10vw;
-  border: 1px solid #fff;
+  height: 4vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   left: 10vw;
-  top: 20vh;
+  top: 37vh;
 }
 
-#root > div > #shape > div:nth-child(3) > div {
-  width: 1vw;
-  height: 1vw;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin-top: 2vh;
+#root #shape > div:nth-child(3) > div {
+  width: 1.5vw;
+  height: 1.5vw;
+  background-color: #F2F2F2;
 }
 
-#root > div #card-section > div {
+#root > #card-section {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 40vh;
+  row-gap: 1vw;
+}
+
+#root > #card-section .card-contains {
   width: 90vw;
   height: 50vh;
-  position: relative;
-  top: -20vh;
   background-color: rgba(200, 200, 200, 0.2);
   -webkit-backdrop-filter: blur(20px);
           backdrop-filter: blur(20px);
@@ -111,12 +109,16 @@
   transition: 1s;
 }
 
-#root > div #card-section > div > h1 {
+#root > #card-section .card-contains > h1 {
+  width: 80vw;
+  height: 35vh;
+  color: #F2F2F2;
+  font-size: 3rem;
+}
+
+#root > #card-section .card-contains:nth-child(2) > h1 {
   width: 80vw;
   height: 20vh;
-  margin: 2vw;
-  font-size: 4rem;
-  color: #fff;
-  font-weight: 900;
+  font-size: 3rem;
 }
 /*# sourceMappingURL=style.css.map */
